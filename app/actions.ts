@@ -1,6 +1,6 @@
 'use server';
 
-export function fetchWithCache(url: string) {
+export  async function fetchWithCache(url: string) {
         return fetch(url, {
             credentials: 'include',
             method: 'GET',
@@ -14,7 +14,7 @@ export function fetchWithCache(url: string) {
         }).then(res => res.json());
 
 }
-export function fetchWithoutCache(url: string) {
+export async function fetchWithoutCache(url: string) {
         return fetch(url, {
             credentials: 'include',
             method: 'GET',
