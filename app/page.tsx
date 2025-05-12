@@ -27,7 +27,7 @@ function fetchWithoutCache(url: string) {
         }).then(res => res.json());
 
 }
-const apiUrl = 'https://nonexisting.shpp.me';
+const apiUrl = 'https://nonexisting.programming.org.ua/test';
 
 export default function Home() {
   return (
