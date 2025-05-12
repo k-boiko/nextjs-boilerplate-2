@@ -1,35 +1,7 @@
 'use client';
 
 import {useState} from 'react';
-
-function fetchWithCache(url: string) {
-        return fetch(url, {
-            credentials: 'include',
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-          mode: 'no-cors',
-            next: {
-                revalidate: 3600
-            }
-        }).then(res => res.json());
-
-}
-function fetchWithoutCache(url: string) {
-        return fetch(url, {
-            credentials: 'include',
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-          mode: 'no-cors',
-            next: {
-                revalidate: 0
-            }
-        }).then(res => res.json());
-
-}
+import {fetchWithCache, fetchWithoutCache} from './actions';
 const apiUrl = 'https://nonexisting.vesnasoft.org/test';
 
 export default function Home() {
