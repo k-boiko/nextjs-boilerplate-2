@@ -1,3 +1,4 @@
+'use client';
 function fetchWithCache(url: string) {
         return fetch(url, {
             credentials: 'include',
