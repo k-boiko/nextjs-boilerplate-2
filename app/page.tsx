@@ -1,4 +1,5 @@
 import Image from "next/image";
+//
 export function fetchWithCache(url) {
         return fetch(url, {
             credentials: 'include',
