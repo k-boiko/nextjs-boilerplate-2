@@ -1,6 +1,4 @@
-import Image from "next/image";
-// test
-export function fetchWithCache(url) {
+function fetchWithCache(url: string) {
         return fetch(url, {
             credentials: 'include',
             method: 'GET',
@@ -14,7 +12,7 @@ export function fetchWithCache(url) {
         }).then(res => res.json());
 
 }
-export function fetchWithoutCache(url) {
+function fetchWithoutCache(url: string) {
         return fetch(url, {
             credentials: 'include',
             method: 'GET',
