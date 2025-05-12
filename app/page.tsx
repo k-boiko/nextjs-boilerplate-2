@@ -19,21 +19,22 @@ export default function Home() {
         <button onClick={() => {
           setIsLoading1(true);
           fetchWithCache(apiUrl).then((data) => {
-            setState1(data)
-            setIsLoading1
+            setState1(data);
+            setIsLoading1(false);
         }).catch((e) => {
-          setIsLoading1(false)
-          setError(e)
+          setIsLoading1(false);
+          setError(e);
         })
         }}>fetch with cache {isLoading1 && '...Loading...'}</button> <br />
         <button onClick={() => {
           setIsLoading2(true);
           fetchWithoutCache(apiUrl).then((data) => {
             setIsLoading2(false);
-            setState2(data)
+            setState2(data);
         }).catch(e => {
-          setIsLoading2(false)
-          setError(e)
+          setIsLoading2(false);
+          setError(e);
+          setError(e);
         })
         }}>fetch without cache {isLoading2 && '...loading...'}</button>
       </p>
